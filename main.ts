@@ -21,6 +21,16 @@ function по_линии () {
         }
     }
 }
+function линия_с_инверсией () {
+    for (let index = 0; index < 8; index++) {
+        while (инверсия == 0) {
+            по_линии()
+        }
+        while (инверсия == 1) {
+            по_белой_линии()
+        }
+    }
+}
 function по_белой_линии () {
     if (StartbitV2.startbit_line_followers(StartbitV2.startbit_LineFollowerSensors.S1, StartbitV2.startbit_LineColor.Black) && StartbitV2.startbit_line_followers(StartbitV2.startbit_LineFollowerSensors.S4, StartbitV2.startbit_LineColor.Black)) {
         if (StartbitV2.startbit_line_followers(StartbitV2.startbit_LineFollowerSensors.S2, StartbitV2.startbit_LineColor.Black) && StartbitV2.startbit_line_followers(StartbitV2.startbit_LineFollowerSensors.S3, StartbitV2.startbit_LineColor.Black)) {
